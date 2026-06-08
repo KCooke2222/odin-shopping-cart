@@ -1,0 +1,44 @@
+.home {
+  background-image: url("../assets/car-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  margin-left: 60px;
+  padding: 24px 32px;
+  background-color: rgb(255, 255, 255);
+}
+
+.title h1 {
+  font-size: 80px;
+  color: #000;
+  margin: 0;
+}
+
+.shopButton {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.shopButton:hover {
+  background-color: #333;
+}
