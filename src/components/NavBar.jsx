@@ -2,7 +2,10 @@ import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 
-export default function NavBar() {
+export default function NavBar({ cart }) {
+  const totalCart = Object.values(cart).reduce((sum, quantity) => {
+    return sum + quantity;
+  }, 0);
   return (
     <>
       <nav className={styles.nav}>
@@ -13,12 +16,12 @@ export default function NavBar() {
           <Link className={styles.link} to="/shop">
             Shop
           </Link>
-          <Link className={styles.link} to="/cart">
-            Cart
-          </Link>
         </div>
         <div className={styles.btns}>
-          <Link className={styles.cartBtn} to="/cart"><FiShoppingCart size={22} /></Link>
+          <Link className={styles.cartBtn} to="/cart">
+            {totalCart}
+            <FiShoppingCart size={22} />
+          </Link>
         </div>
       </nav>
     </>

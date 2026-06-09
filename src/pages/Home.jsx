@@ -1,4 +1,5 @@
 import styles from "./Home.module.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -6,9 +7,9 @@ export default function Home() {
       <main className={styles.home}>
         <div className={styles.title}>
           <h1>Automobile</h1>
-          <button className={styles.shopButton}>
+          <Link className={styles.shopButton} to="/Shop">
             Shop Now
-          </button>
+          </Link>
         </div>
       </main>
     </>

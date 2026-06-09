@@ -37,6 +37,7 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.2s;
+  text-decoration: none;
 }
 
 .shopButton:hover {
