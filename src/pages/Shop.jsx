@@ -16,6 +16,7 @@ export default function Shop() {
               product={product}
               cart={cart}
               setCart={setCart}
+              mode="shop"
             />
           ))}
         </div>

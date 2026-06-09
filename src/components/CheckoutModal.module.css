@@ -1,0 +1,112 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.racer {
+  position: fixed;
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  animation: race linear infinite;
+  z-index: 99;
+}
+
+@keyframes race {
+  from { transform: translateX(-150px); }
+  to   { transform: translateX(calc(100vw + 150px)); }
+}
+
+.modal {
+  position: relative;
+  background: #fff;
+  width: 440px;
+  max-width: 90vw;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 101;
+}
+
+.modal h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.thumb {
+  width: 52px;
+  height: 40px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.itemTitle {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.itemQty {
+  font-size: 13px;
+  color: #555;
+  min-width: 28px;
+}
+
+.itemPrice {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.total {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.closeBtn {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.closeBtn:hover {
+  background-color: #333;
+}
