@@ -18,7 +18,7 @@ export default function NavBar({ cart }) {
           </Link>
         </div>
         <div className={styles.btns}>
-          <Link className={styles.cartBtn} to="/cart">
+          <Link className={styles.cartBtn} to="/cart" aria-label="cart">
             {totalCart}
             <FiShoppingCart size={22} />
           </Link>
